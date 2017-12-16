@@ -26,9 +26,3 @@ if text:
     for rec in REC_TYPES:
         if rec_indicies[rec] != [0, 0]:
             rec_stores[rec] = text[rec_indicies[rec][0]: rec_indicies[rec][1]]
-
-    for k in rec_stores:
-        print(k, len(rec_stores[k]))
-        if k == '04':
-            for line in (rec_stores[k]):
-                print(len(line.split('\t')), line)
