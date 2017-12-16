@@ -30,7 +30,7 @@ for trans in rec_stores['05']:
     #         if current_person != person.split('\t')[4].strip() + person.split('\t')[5].strip():
     #             current_person = person.split('\t')[4].strip() + person.split('\t')[5].strip()
     #             print(person.split('\t')[4].strip(), person.split('\t')[5].strip(), 'found in record 04 - cardholder')
-                # print(person.split('\t')[4].strip(), person.split('\t')[5].strip())
+    #             print(person.split('\t')[4].strip(), person.split('\t')[5].strip())
 
     # for car_sum in rec_stores['02']:
     #     if trans.split('\t')[3] in car_sum:
@@ -54,9 +54,9 @@ for trans in rec_stores['05']:
 
     # for passenger in rec_stores['14']:
     #     if trans.split('\t')[3] in passenger:
-    #         print(trans.split('\t')[8], 'spent: {:.2f}'.format(float(trans.split('\t')[14]) / 100))
-    #         # print("transaction", trans.split('\t')[3], 'found in 14 passenger detail')
-    #         print("Passenger ", passenger.split('\t')[10].strip(), 'flies')
+            # print(trans.split('\t')[8], 'spent: {:.2f}'.format(float(trans.split('\t')[14]) / 100))
+            # print("transaction", trans.split('\t')[3], 'found in 14 passenger detail')
+            # print("Passenger ", passenger.split('\t')[10].strip(), 'flies')
     #
     # for leg in rec_stores['15']:
     #     if trans.split('\t')[3] in leg:
