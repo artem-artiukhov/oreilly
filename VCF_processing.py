@@ -32,10 +32,10 @@ for trans in rec_stores['05']:
     #             print(person.split('\t')[4].strip(), person.split('\t')[5].strip(), 'found in record 04 - cardholder')
     #             print(person.split('\t')[4].strip(), person.split('\t')[5].strip())
 
-    # for car_sum in rec_stores['02']:
-    #     if trans.split('\t')[3] in car_sum:
-    #         print(trans.split('\t')[8], 'spent: {:.2f}'.format(float(trans.split('\t')[14]) / 100))
-    #         # print("transaction", trans.split('\t')[3], 'found in 02 car summary')
+    for car_sum in rec_stores['02']:
+        if trans.split('\t')[3] in car_sum:
+            print(trans.split('\t')[8], 'spent: {:.2f}'.format(float(trans.split('\t')[14]) / 100))
+            # print("transaction", trans.split('\t')[3], 'found in 02 car summary')
 
     # for car_det in rec_stores['27']:
     #     if trans.split('\t')[3] in car_det:
@@ -64,21 +64,21 @@ for trans in rec_stores['05']:
     #         print("on leg", leg.split('\t')[5].strip(), "from", leg.split('\t')[16], 'to', leg.split('\t')[6].strip(),
     #               'by', leg.split('\t')[7], 'ticked purchased in:', leg.split('\t')[23])
     #
-    for sum_item in rec_stores['08']:
-        if trans.split('\t')[3] in sum_item:
-            print(trans.split('\t')[8], 'spent: {:.2f}'.format(float(trans.split('\t')[14]) / 100))
-            # print("transaction", trans.split('\t')[3], 'found in 08 line item summary')
+    # for sum_item in rec_stores['08']:
+    #     if trans.split('\t')[3] in sum_item:
+    #         print(trans.split('\t')[8], 'spent: {:.2f}'.format(float(trans.split('\t')[14]) / 100))
+    #         # print("transaction", trans.split('\t')[3], 'found in 08 line item summary')
 
-    for line_item in rec_stores['07']:
-        if trans.split('\t')[3] in line_item:
-            print('{:.2f}'.format(float(line_item.split('\t')[17])/100), 'spent, total: {:.2f}'.format(float(trans.split('\t')[14]) / 100),
-                  'on item', line_item.split('\t')[5].lstrip('0'), '-', line_item.split('\t')[8])
-            # print("transaction", trans.split('\t')[3], 'found in 07 line item detail')
-
-    for ship_item in rec_stores['21']:
-        if trans.split('\t')[3] in ship_item:
-            print('shipping by', ship_item.split('\t')[7], 'net amount spent: {:.2f}'.format(float(ship_item.split('\t')[16]) / 100),
-                  'tax amount: {0:.2f} on item {1}'.format(float(ship_item.split('\t')[17]) / 100, ship_item.split('\t')[5].lstrip('0')),
-                  '\t', 'with tracking number', ship_item.split('\t')[8].strip(), 'discount amount: {:.2f}'.format(float(ship_item.split('\t')[18]) / 100))
-            input()
-            # print("transaction", trans.split('\t')[3], 'found in 21 shipping')
+    # for line_item in rec_stores['07']:
+    #     if trans.split('\t')[3] in line_item:
+    #         print('{:.2f}'.format(float(line_item.split('\t')[17])/100), 'spent, total: {:.2f}'.format(float(trans.split('\t')[14]) / 100),
+    #               'on item', line_item.split('\t')[5].lstrip('0'), '-', line_item.split('\t')[8])
+    #         # print("transaction", trans.split('\t')[3], 'found in 07 line item detail')
+    #
+    # for ship_item in rec_stores['21']:
+    #     if trans.split('\t')[3] in ship_item:
+    #         print('shipping by', ship_item.split('\t')[7], 'net amount spent: {:.2f}'.format(float(ship_item.split('\t')[16]) / 100),
+    #               'tax amount: {0:.2f} on item {1}'.format(float(ship_item.split('\t')[17]) / 100, ship_item.split('\t')[5].lstrip('0')),
+    #               '\t', 'with tracking number', ship_item.split('\t')[8].strip(), 'discount amount: {:.2f}'.format(float(ship_item.split('\t')[18]) / 100))
+    #         input()
+    #         # print("transaction", trans.split('\t')[3], 'found in 21 shipping')

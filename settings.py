@@ -59,11 +59,11 @@ def validateCheckDate(value):
     return bvalue
 
 
-def updateOline(field, value, end=None):
-    existingValue = getattr(oline, field)
-    updateValue = str(fdict.get(value, value)).strip()[0:end]
-    existingValue[1] = updateValue
-    return
+# def updateOline(field, value, end=None):
+#     existingValue = getattr(oline, field)
+#     updateValue = str(fdict.get(value, value)).strip()[0:end]
+#     existingValue[1] = updateValue
+#     return
 
 
 class Base(object):
@@ -237,3 +237,12 @@ REC_INDICIES = {rec: [0, 0] for rec in REC_TYPES}
 
 # rec stores
 # REC_STORES = {rec: None for rec in REC_TYPES}
+
+OUTPUT_RECORD = ['Line_Number','Transaction_UniqueID','TransactionDate','TransactionDate_Mask','Name','Vendor_Name',
+                 'Amount_Spent','Amount_Spent_Decimals','Currency_Code_Spent','VAT_Percent','VAT_Percent_Decimals',
+                 'VAT_Amount','VAT_Amount_Decimals','Amount_Original','Amount_Original_Decimals','CurrencyCode_Original',
+                 'ExchangeRate','ExchangeRate_Decimals','MatterNumber','DefaultCostCode','ExpenseMapping','AppendToDescription',
+                 'ExtraText','CustomerUniqueID','isFirmPaid','isDeletable','isNeededReceipt','isAmountDisabled','isCurrencyDisabled',
+                 'ParentID','InputType','Description','Business_Purpose','hasReceipt','hasTaxReceipt','isPersonal','Country_Alpha',
+                 'Reconciler','Reconciler_Decimal','Divisor','UDA_Values','StatementDate','WidgetEnabler','WidgetOnAddTransaction',
+                 'IsDisableRowButton','ReferenceData']
